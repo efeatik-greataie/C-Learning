@@ -16,10 +16,13 @@ int get_control(int argc, char *m[])  {
                 printf("Program uses given arguments to process information. The appopirate using should be like this: \n");
                 printf("To encrypt a text: ./caesar -k [key: the value that will cipher your text] -m [message: the text you want to cipher.] \n");
                 printf("To decrypt a text: ./caesar -d -k [key] -m [message] \n");
+                return 0;
         } else if (strcmp(m[1], "-d") == 0 && strcmp(m[2], "-k") == 0 && strcmp(m[4], "-m") == 0) {
                 decrypt(argc, m);
+                return 0;
         } else if(strcmp(m[1], "-k") == 0 && strcmp(m[3], "-m") == 0) {
                 encrypt(argc, m);
+                return 0;
         } else {
                 printf("Bad argument using! Please try \"./caesar -help\" to get help. \n");
                 return 1;
