@@ -18,5 +18,7 @@ int main(int argc, char *argv[]) {
 
         people[2].name = "Bebuş";
         people[2].number = "+905555555553";
+        
+        
 
 }
